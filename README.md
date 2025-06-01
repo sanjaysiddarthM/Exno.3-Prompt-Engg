@@ -3,45 +3,170 @@
 ### REGISTER NUMBER : 
 ### Aim: To design an AI-powered chatbot that assists customers in resolving issues related to product troubleshooting, order tracking, and general inquiries. The chatbot should handle various customer queries efficiently while maintaining a conversational and user-friendly tone. In this experiment, we will employ different prompt patterns to guide the development process of the chatbot, ranging from basic task-oriented prompts to more complex, persona-driven prompts.
 
-### Algorithm:  1. Direct Instruction Prompts
-Objective: Guide the chatbot to respond concisely to customer inquiries.
-Prompt Pattern:
-Prompt: "When a customer asks for the status of their order, reply with: 'Your order is currently being processed and will be delivered by [date].'"
-2. Contextual Prompting
-Objective: Incorporate specific context to provide detailed answers based on the user’s previous interaction.
-Prompt Pattern:
-Prompt: "If the customer previously mentioned that they haven’t received their order, say, 'I see that you mentioned your order hasn't arrived yet. Let me check the details for you and get back shortly.'"
-3. Persona-Based Prompting
-Objective: Design the chatbot to adopt a specific persona, making the interaction more engaging.
-Prompt Pattern:
-Prompt: "Pretend you are a friendly, helpful customer service representative. Use a conversational tone, such as 'Hey there! I’m here to help with any questions you might have. Let’s get your issue sorted!'"
-4. Few-Shot Prompting
-Objective: Teach the AI how to respond using a few examples, enabling it to generalize for similar situations.
-Prompt Pattern:
-Prompt: "Here are some examples of how to handle technical questions:
-'My phone isn't charging.' → 'Have you tried using a different cable? If that doesn’t work, it may be an issue with the port.'
-'The screen is flickering.' → 'It sounds like a display issue. Have you tried restarting the device?'
-Now, respond to: 'My app keeps crashing.'"
-5. Chain of Thought Prompting
-Objective: Use a step-by-step reasoning approach for resolving more complex or technical issues.
-Prompt Pattern:
-Prompt: "When a customer reports their laptop overheating, guide them through the following steps:
-Ask if they are using the laptop on a soft surface.
-Suggest moving the laptop to a flat, hard surface for better airflow.
-Ask if they’ve cleaned the vents recently.
-Recommend restarting the device to see if the issue persists.
-Now, solve: 'My laptop fan is making a loud noise.'"
-6. Instruction with Constraints
-Objective: Instruct the chatbot to provide assistance while adhering to specific constraints (e.g., response length or tone).
-Prompt Pattern:
-Prompt: "Respond to order inquiries in no more than 50 words and avoid using technical jargon. For example, 'Your order is on the way and should arrive by [date]. Feel free to reach out if you need anything else.'"
-7. Reflective Prompting
-Objective: Ensure that the chatbot reflects the user’s query back to them before providing a response, reducing misunderstandings.
-Prompt Pattern:
-Prompt: "When a customer asks for help, first reflect their question back to them. For example, if they ask 'How can I reset my password?' respond with 'You're asking how to reset your password, correct? Here’s how you can do it.'"
-Result: The various types of Prompts are executed successfully.
+# EXERCISE : 3
+## Introduction
+ Purpose: To explore how diverse prompting methods can be applied in
+developing scenario-based reports.
+Scope: Application in fields such as education, business strategy,
+training, and AI-driven simulations.
+
+ Overview: Scenarios are hypothetical or real-life-based situations.
+Prompting techniques are strategies used to elicit responses, thoughts, or
+analysis.
+Understanding Core Concepts
+## A. Scenario-Based Reports
+ Narrative-based documents depicting realistic situations.
+ Used for problem-solving, training, planning, and decision-making.
+B. Prompting Techniques
+ Open-ended prompts (e.g., “What could be the outcomes?”)
+ Closed prompts (e.g., “Choose the most likely decision.”)
+ Role-based prompts (e.g., “Imagine you’re the CEO…”)
+ Reflection prompts (e.g., “Why did this fail?”)
+ Action-based prompts (e.g., “List the next 3 steps.”)
+ Visual prompts (images or diagrams as stimuli)
+ Socratic questioning (drilling deeper with follow-up questions)
 
+## Prompts and Responses
+1. Zero-Shot Prompting
+Prompt: “List effective strategies for improving productivity while working
+remotely.”
+## Response:
+"To improve productivity while working remotely, consider creating a dedicated
+workspace, setting a consistent schedule, minimizing distractions, using
+productivity tools, and taking regular breaks."
+## Analysis:
+- Strengths: Provides a quick, straightforward answer.
+- Limitations: Lacks depth and specific examples, making it harder for
+employees to understand how to implement these strategies effectively.
+## 2. Few-Shot Prompting
+## Prompt: “Here are some strategies for remote work: Create a dedicated
+workspace, set a consistent schedule, and use productivity tools.
+Now, suggest three more effective strategies for improving productivity while
+working remotely.”
+## Response:
+"In addition to those strategies, you can: Minimize distractions by turning off
+notifications, take regular breaks using the Pomodoro method, and maintain
+regular communication with your team."
+## Analysis:
+- Strengths: Builds on the initial strategies, making the response more
+comprehensive and specific.
 
+- Limitations: Requires some prior context to effectively expand upon, which
+may not always be available.
+## 3. Chain-of-Thought (CoT) Prompting
+Prompt: “Explain how to improve productivity while working remotely. Think
+through the strategies one by one and provide reasons for each.”
+### Response:
+"To enhance productivity, consider: creating a dedicated workspace to separate
+work from home life; setting a consistent schedule to maintain structure;
+minimizing distractions by setting quiet hours; using productivity tools to
+organize tasks; and taking regular breaks, like with the Pomodoro method, to
+sustain energy and focus throughout the day."
+### Analysis:
+- Strengths: Provides detailed, reasoned responses that connect each strategy to
+its benefits.
+- Limitations: Requires more time and may lead to longer responses.
+### Benefits of Using Diverse Prompting
+ Encourages critical thinking and multi-perspective analysis
+ Supports engagement and retention in training contexts
+ Helps simulate real-world decision-making
+Best Practices
+ Match prompts to learner or audience level
+ Use multimodal prompts (text, visual, auditory)
+ Integrate feedback loops—responses to prompts guide next steps
+ Ensure diversity in roles and viewpoints presented
+
+## COMPARISON OF RESPONSES
+Prompt Type
+Zero-Shot
+Prompting
+Strengths
+Quick,
+straightforward
+Response
+Builds on existing Requires initial
+Weaknesses
+Lacks detail and
+actionable steps
+Best Use Case
+Suitable for brief,
+concise answers
+Few-Shot
+Prompting
+Effective when
+context
+or examples are
+available
+context, offering context for
+detailed examples effective
+expansion
+Chain-ofThought
+(CoT) Prompting
+Provides detailed, Time-consuming, Ideal for
+well-reasoned
+responses
+connecting
+strategies
+and benefits
+may
+lead to overly
+detailed
+responses
+comprehensive,
+thorough
+explanations
+Example Scenario: Cybersecurity Breach in a Mid-Sized Firm
+## Scenario Summary:
+A mid-sized firm experiences a data breach affecting customer records. The IT
+manager must act quickly while managing internal communication and external
+reputation.
+## Prompts Applied:
+ Open-ended: “What could have caused this breach?”
+ Role-based: “As the IT manager, what’s your immediate plan?”
+ Action-based: “List 3 actions to secure systems.”
+
+ Reflection: “What lessons can be learned from the company’s
+preparedness?”
+ Closed: “Should the firm notify affected customers immediately?
+(Yes/No)”
+ Visual: Include a network diagram showing breach points.
+Framework for Report Development
+Prompting
+Techniques Used
+Open-ended, rolebased
+Stage Description
+Scenario
+Creation
+Context
+Framing
+Problem
+Statement
+Stakeholder
+Views
+Solution Paths
+Consequences
+Build a realistic or hypothetical
+situation
+Define goals, stakes, actors, and
+constraints Role-based, closed
+Introduce challenge or conflict Socratic, reflection
+Open-ended, actionbased
+Action-based, visual
+Reflection, closed
+Include multiple perspectives
+Explore possible actions or decisions
+Analyze outcomes of each decision
+Summarize learnings, implications, or
+recommendations
+Conclusion Open-ended, Socratic
+
+## Conclusion
+The comparison of zero-shot, few-shot, and chain-of-thought prompting
+techniques reveals that each method has distinct strengths and is suited to
+different scenarios. Zero-shot prompts are quick but lack depth, making them
+suitable for brief inquiries. Few-shot prompts enhance specificity by building on
+context, while chain-of-thought prompts produce comprehensive insights by
+connecting strategies to their benefits.
 
 
 # Result: Thus the Prompts were exected succcessfully .
